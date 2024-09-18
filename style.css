@@ -1,0 +1,278 @@
+/* Geral */
+body {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6423a0;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.nav-menu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f0e6ff;
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    background: url('https://img.icons8.com/material-outlined/24/search.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: -46px;
+    position: relative;
+    z-index: 1;
+}
+
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    background: url('https://img.icons8.com/material-outlined/24/shopping-cart.png') no-repeat center center;
+    background-size: contain;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1 1 calc(50% - 20px); /* Ajustado para 2 produtos por linha */
+    box-sizing: border-box;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.product .sub-price {
+    text-decoration: line-through;
+    color: #ad0404;
+}
+
+.product .price {
+    font-weight: 700;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.price-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #52125a;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.price-button:hover {
+    background-color: #3d03a1;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.newsletter {
+    background-color: #5e05b1;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: calc(100% - 130px);
+    margin-right: 10px;
+}
+
+.newsletter input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d03a1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #2b2b2b;
+}
+
+/* Consultas de Mídia para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .search-bar input {
+        width: calc(100% - 46px);
+    }
+
+    .search-bar button {
+        margin-left: -36px;
+    }
+
+    .newsletter input[type="email"] {
+        width: calc(100% - 120px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar button {
+        margin-left: 0;
+    }
+
+    .newsletter input[type="email"] {
+        width: calc(100% - 100px);
+    }
+
+    .product {
+        flex: 1 1 calc(100% - 20px); /* Ajustado para 1 produto por linha em telas pequenas */
+    }
+
+    .slider {
+        max-height: 200px;
+    }
+}
